@@ -12,7 +12,7 @@ properties:
           memoryInGB: 1.5
       livenessProbe:
         httpGet:
-          path: http://devops-20180532.francecentral.azurecontainer.io/echo?lat=9.32&lon=102.75
+          path: /health
         periodSeconds: 5
   osType: Linux
   restartPolicy: Always
