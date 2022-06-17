@@ -5,7 +5,7 @@ properties:
   containers:
   - name: 20180532
     properties:
-      image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20180532:v1
+      image: efreidevops.azurecr.io/20180532:v1
       resources:
         requests:
           cpu: 1.0
