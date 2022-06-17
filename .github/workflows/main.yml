@@ -30,8 +30,14 @@ jobs:
                 docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/20180532:v1
 
             - name: 'Deploy to Azure Container Instances'
-              uses: azure/CLI@v1
+              uses: 'azure/aci-deploy@v1'
               with:
-                  azcliversion: 2.30.0
-                  inlineScript: |
-                    az container create --resource-group ${{ secrets.RESOURCE_GROUP }} --image ${{ secrets.REGISTRY_LOGIN_SERVER }}/20180532:v1 --dns-name-label devops-20180532 --registry-login-server ${{ secrets.REGISTRY_LOGIN_SERVER }} --registry-username ${{ secrets.REGISTRY_USERNAME }} --registry-password ${{ secrets.REGISTRY_PASSWORD }} --secure-environment-variables API_KEY=${{ secrets.API_KEY }} --location 'france central' --ports 80 -f liveness-probe.yaml
+                resource-group: ${{ secrets.RESOURCE_GROUP }}
+                dns-name-label: devops-20180532
+                image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20180532:v1
+                registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+                registry-username: ${{ secrets.REGISTRY_USERNAME }}
+                registry-password: ${{ secrets.REGISTRY_PASSWORD }}
+                name: 20180532
+                location: 'france central'
+                secure-environment-variables: API_KEY=${{ secrets.API_KEY }}
