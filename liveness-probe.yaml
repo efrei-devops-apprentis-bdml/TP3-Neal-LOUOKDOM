@@ -19,7 +19,7 @@ properties:
   ipAddress:
     type: Public
     ports:
-    - protocol: tcp
+    - protocol: http
       port: '80'
 tags: null
 type: Microsoft.ContainerInstance/containerGroups
