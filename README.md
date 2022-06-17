@@ -23,3 +23,10 @@ Enfin, tout a bien fonctionné.
 Malheureusement je n'ai pas pu attaquer la partie bonus car je ne pouvais pas tester 
 
 Saisissez plutôt la commande ```curl "http://devops-20180532.francecentral.azurecontainer.io/echo?lat=9.32&lon=102.75"``` si vous voulez avoir une sortie directe des données
+
+
+## Avantages de ces process
+Je pense que le gros avantage sur de Github actions est le fait d'automatiser les tâches. Plutôt que de lancer chaque fichier à différents endroits, il le fait.
+
+## Inconvénient
+Vu que tout est mis à jour dès lors qu'on commit, si un jour on modifie par exemple l'API et il y a besoin de faire d'autres modifications relatives aux technologies à utiliser (l'exemple du port d'écoute que nous avons évoqué tout à l'heure) et qu'il oublie de vérifier son travail, se trouve en production un produit disfonctionnel.
