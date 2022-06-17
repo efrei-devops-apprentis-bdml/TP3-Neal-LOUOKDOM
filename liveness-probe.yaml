@@ -18,8 +18,5 @@ properties:
   restartPolicy: Always
   ipAddress:
     type: Public
-    ports:
-    - protocol: http
-      port: '80'
 tags: null
 type: Microsoft.ContainerInstance/containerGroups
