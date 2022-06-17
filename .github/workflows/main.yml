@@ -36,3 +36,4 @@ jobs:
             name: 20180532
             location: 'france central'
             secure-environment-variables: API_KEY=${{ secrets.API_KEY }}
+            file: liveness-probe.yaml
