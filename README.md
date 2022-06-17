@@ -24,6 +24,9 @@ Malheureusement je n'ai pas pu attaquer la partie bonus car je ne pouvais pas te
 
 Saisissez plutôt la commande ```curl "http://devops-20180532.francecentral.azurecontainer.io/echo?lat=9.32&lon=102.75"``` si vous voulez avoir une sortie directe des données
 
+## Partie Bonus
+Dans cette partie, j'ai essayé et malheureusement en vain, de mettre en place une liveness probe, mais au bout de plusieurs essais différents, je n'y suis pas arrivé. Le problème se poserait sur le fait que Azure ne laisse pas la possibilité à Github d'utiliser le CLI ce qui rend impossible cette tâche pour nous
+
 
 ## Avantages de ces process
 Je pense que le gros avantage sur de Github actions est le fait d'automatiser les tâches. Plutôt que de lancer chaque fichier à différents endroits, il le fait.
