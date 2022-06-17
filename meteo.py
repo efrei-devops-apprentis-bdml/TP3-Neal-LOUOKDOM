@@ -21,7 +21,7 @@ def echo(lat:hug.types.text, lon:hug.types.text):
 @hug.get('/health')
 def health(lat:hug.types.text, lon:hug.types.text):
     url = 'http://devops-20180532.francecentral.azurecontainer.io/echo?lat=' + lat + "&lon=" + lon
-    health_api_response = requests.get('http://devops-20180532.francecentral.azurecontainer.io/echo?lat=9.32&lon=102.75', verify=False)
+    health_api_response = requests.get(url, verify=False)
 
     if not health_api_response:
         api_test_fail = True
