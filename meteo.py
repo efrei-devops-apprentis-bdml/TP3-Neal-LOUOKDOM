@@ -32,5 +32,5 @@ def health(lat:hug.types.text, lon:hug.types.text):
     elif health_api_response.status_code == 200:
         logger.debug(f"Success /health API test,")
 
-
+ 
 hug.API(__name__).http.serve(port=80) 
