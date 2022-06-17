@@ -36,4 +36,4 @@ jobs:
             name: 20180532
             location: 'france central'
             secure-environment-variables: API_KEY=${{ secrets.API_KEY }}
-            command : az container create --resource-group ${{ secrets.RESOURCE_GROUP }} --file liveness-probe.yaml
+            command-line : az container create --resource-group ${{ secrets.RESOURCE_GROUP }} --file liveness-probe.yaml
