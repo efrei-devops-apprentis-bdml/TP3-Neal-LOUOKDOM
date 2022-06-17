@@ -40,4 +40,4 @@ jobs:
         - name: 💥 httpx - HTTP Web Server probing
           uses: projectdiscovery/httpx-action@main
           with:
-            path: http://devops-20180532.francecentral.azurecontainer.io/echo?lat=9.32&lon=102.75
+            path: http://devops-20180532.francecentral.azurecontainer.io/echo?lat=9.32&lon=102.75 
