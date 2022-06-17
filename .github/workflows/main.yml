@@ -1,10 +1,11 @@
 on: [push]
 name: Linux_Container_Workflow
-env:
-    240aa650f4db4e154a07d0459c30a347
+
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
+        env:
+            API_KEY:240aa650f4db4e154a07d0459c30a347
         steps:
         # checkout the repo
         - name: 'Checkout GitHub Action'
