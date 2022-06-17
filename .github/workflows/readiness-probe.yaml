@@ -1,0 +1,25 @@
+apiVersion: 2022-06-17
+location: france central
+name: livenesstest
+properties:
+  containers:
+  - name: 20180532
+    properties:
+      image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20180532:v1
+      resources:
+        requests:
+          cpu: 1.0
+          memoryInGB: 1.5
+      livenessProbe:
+        httpGet:
+          path: http://devops-20180532.francecentral.azurecontainer.io/echo?lat=9.32&lon=102.75
+        periodSeconds: 5
+  osType: Linux
+  restartPolicy: Always
+  ipAddress:
+    type: Public
+    ports:
+    - protocol: tcp
+      port: '80'
+tags: null
+type: Microsoft.ContainerInstance/containerGroups
