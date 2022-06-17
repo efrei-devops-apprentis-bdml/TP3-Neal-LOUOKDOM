@@ -17,7 +17,19 @@ def echo(lat:hug.types.text, lon:hug.types.text):
         return ("erreur")
     else:
         return response
-        
+    
+@hug.get('/health')
+def health():
+    health_api_response = requests.get('http://devops-20180532.francecentral.azurecontainer.io/echo?lat=9.32&lon=102.75', verify=False)
+
+    if not health_api_response:
+        api_test_fail = True
+        logger.error(f"Could not get /health response, the test has been failed!")
+    elif health_api_response.status_code != 200:
+        api_test_fail = True
+        logger.error(f"Bad /health response, the test has been failed!")
+    elif health_api_response.status_code == 200:
+        logger.debug(f"Success /health API test,")
 
 
 hug.API(__name__).http.serve(port=80) 
